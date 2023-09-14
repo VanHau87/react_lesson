@@ -1,17 +1,23 @@
-// const xhttp = new XMLHttpRequest()
-// xhttp.onreadystatechange = function () {
-//   if (this.readyState === 4 && this.status === 200) {
-//     const res = JSON.parse(this.responseText)
-//     let html = ''
-//     res.data.forEach((item) => {
-//       html += `<div>${item.first_name} ${item.last_name}</div>`
-//     })
-//     document.getElementById('result').innerHTML = html
-//     console.log(res)
-//   }
-// }
-// xhttp.open('GET', 'https://reqres.in/api/users?page=2', true)
-// xhttp.send()
+const xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = () => {
+  console.log(xhttp.readyState);
+};
+
+/*
+xhttp.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    const res = JSON.parse(this.responseText);
+    let html = "";
+    res.data.forEach((item) => {
+      html += `<div>${item.first_name} ${item.last_name}</div>`;
+    });
+    document.getElementById("result").innerHTML = html;
+    console.log(res);
+  }
+};*/
+
+xhttp.open("GET", "https://reqres.in/api/users?page=2", true);
+xhttp.send();
 
 // fetch('https://reqres.in/api/users/23')
 //   .then((res) => {
@@ -57,35 +63,36 @@
 //   .catch((error) => {
 //     console.warn(error)
 //   })
-
+/*
 const http = axios.create({
-  baseURL: 'https://reqres.in/api'
-})
+  baseURL: "https://reqres.in/api",
+});
 
 http.interceptors.request.use(
   (config) => {
-    return config
+    return config;
   },
   (error) => {
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
-)
+);
 
 http.interceptors.response.use(
   (config) => {
-    console.log(config)
-    return config.data.data
+    console.log(config);
+    return config.data.data;
   },
   (error) => {
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
-)
+);
 
 http
-  .get('/users/2')
+  .get("/users/2")
   .then((res) => {
-    console.log(res)
+    console.log(res);
   })
   .catch((error) => {
-    console.warn(error)
-  })
+    console.warn(error);
+  });
+*/
