@@ -1,0 +1,19 @@
+{
+  "name": "mini-project-yarn",
+  "version": "1.0.0",
+  "description": "technology with yarn",
+  "main": "index.js",
+  "author": "hauvan",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
